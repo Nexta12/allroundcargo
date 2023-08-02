@@ -1,0 +1,54 @@
+<%- include('./partials/_header') %>
+    <%- include('./partials/sidebar') %>
+
+        <div class="main-site">
+
+            <%- include('./partials/header_wrapper') %>
+                <div class="conatiner">
+                    <div class="col bg-light shadow-sm my-2">
+                        <p class="text-muted text-left py-3 mx-5 align-items-center d-flex flex-wrap">
+                            <a href="/api/index/dashboard">Create new page</a>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-sm-6 mx-auto">
+                        <form action="/d/create" method="post" enctype="multipart/form-data">
+                            <%- include('./partials/flash_messages') %>
+                            <div class="form-group">
+                                <label for="ptitle" class="mb-2">Page Title </label>
+                                <input type="text" class="form-control" name="ptitle">
+                            </div>
+                            <div class="form-group">
+                                <label for="ptitle" class="mb-2">Page subTitle </label>
+                                <input type="text" class="form-control" name="subtitle" maxlength="200">
+                            </div>
+
+                            <div class="form-group" class="mb-2">
+                                <label for="coverPic">Upload Header bgd Image</label>
+                                <input type="file" name="coverImg" class="form-control mb-2">
+                            </div>
+                            <div class="form-group">
+                                <label for="textcontent">Page Text Content</label>
+                            <textarea name="textcontent" class="form-control mt-2"><%= typeof textcontent !='undefined' ? textcontent : '' %></textarea>
+                            </div>
+                            <!-- <div class="form-group" class="my-2">
+                                <label for="coverPic">Upload Image Widget</label>
+                                <input type="file" name="sideImage" class="form-control">
+                            </div> -->
+
+                            <button type="submit" class="btn btn-info w-100 my-2">Publish Page</button>
+
+                        </form>
+                    </div>
+                </div>
+               
+
+
+        </div>
+
+        </body>
+
+        </html>

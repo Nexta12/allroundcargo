@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-sm navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="/img/logo.png" alt="AllroundLogo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu">
+                        <a href="/d/air-freight" class="dropdown-item">Air Freight</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/sea-freight" class="dropdown-item">Sea Freight</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/warehousing" class="dropdown-item">Warehousing</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/3pl-logistics-services" class="dropdown-item">3PL Logistics Services</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/haulage-and-land-transportation" class="dropdown-item">Haulage & Land Transportation</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Company</a>
+                    <div class="dropdown-menu">
+                        <a href="/d/about-us" class="dropdown-item">About Us</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/our-mission" class="dropdown-item">Mission</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/our-vision" class="dropdown-item">Vision</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/our-team" class="dropdown-item">Our Team</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/d/industries-we-serve" class="dropdown-item">Industries We Serve</a>
+                    </div>
+                </li>
+
+
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/d/contacts">Contact</a>
+                </li>
+                <% if(!user){ %>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="/secure/login">Login <span><i
+                                    class="las la-lock text-success"></i></span></a>
+                    </li>
+                    <% } else{ %>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/secure/logout">Logout <span><i
+                                        class="las la-lock text-success"></i></span></a>
+                        </li>
+                        <% }%>
+
+            </ul>
+
+        </div>
+    </div>
+</nav>

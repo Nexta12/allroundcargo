@@ -1,0 +1,52 @@
+<%- include('./partials/_header') %>
+    <%- include('./partials/sidebar') %>
+
+        <div class="main-site">
+
+            <%- include('./partials/header_wrapper') %>
+                <div class="conatiner">
+                    <div class="col bg-light shadow-sm my-2">
+                        <p class="text-muted text-left py-3 mx-5 align-items-center d-flex flex-wrap">
+                            <a href="/api/index/dashboard">All pages</a>
+                        </p>
+                    </div>
+                </div>
+
+              <div class="container">
+                <div class="row">
+                    <div class="col-sm-10 mx-auto">
+                        <%- include('./partials/flash_messages') %>
+                       <div class="allpages">
+                         <% if(allpages){ %>
+                            <% allpages.forEach(p=>{ %>
+                           <div class="singlepage">
+                               <div class="row">
+                                  <div class="col-sm-6"><a href="/d/<%=p.slug %>" target="_blank"><%= p.ptitle %></a></div>
+                                  <div class="col-sm-2"><a href="/d/<%=p.slug %>" target="_blank"> View</a></div>
+                                  <div class="col-sm-2 text-end"><a href="/d/page/<%=p.slug %>" target="_blank"><i class="las la-edit" title="Edit"></i>Edit</a></div>
+                                  <div class="col-sm-2 text-end">
+
+                                    <form action="/d/delete/<%= p.id %>?_method=DELETE" method="POST">
+                                        <a class="deletConfirm"><i class="las la-trash  la-2x-size text-danger" title="Delete" title="Delete"></i></a>
+                                        <input type="submit" value="delete" class="d-none " id="deleteInput">
+                                    </form>
+                                </div>
+                               </div>
+                           </div>
+
+                            <% }) %>
+                            <% } %>
+
+                       </div>
+
+                    </div>
+                </div>
+              </div>
+
+
+
+        </div>
+
+        </body>
+
+        </html>

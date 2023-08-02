@@ -1,0 +1,43 @@
+<div class="header-wrapper">
+    <div class="headerLeft">
+        <label for="sidebar-toggle">
+            <span class="las la-bars"></span>
+        </label>
+        <h3>
+            UserName
+        </h3>
+    </div>
+    <div class="headerRight">
+        <div class="userprofile">
+
+            <label for="usermenudroper">
+                <span class="las la-user-circle"></span>
+            </label>
+            <div class="username text-capitalize ms-1">
+                <%= user.username %>
+                    <input type="checkbox" id="usermenudroper" class="d-none">
+                    <div class="usermenu">
+                        <ul>
+                          
+                            <li>
+                                <span class="las la-edit"></span>
+                                <a href="#">Edit Profile</a>
+                            </li>
+                            <li>
+                                <span class="las la-lock"></span>
+                                <a href="#">Change Password</a>
+                            </li>
+                            
+
+                            <li>
+                                <span class="las la-sign-out-alt"></span>
+                                <a href="/secure/logout">Logout</a>
+                            </li>
+
+                        </ul>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+</div>

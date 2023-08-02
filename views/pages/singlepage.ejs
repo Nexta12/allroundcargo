@@ -1,0 +1,97 @@
+
+<body>
+<%- include('./partials/navbar') %>
+<section class="showcase page">
+    <div class="overlay page"></div>
+    <div class="text">
+        <h3><%= page.ptitle%> </h3>
+        <p><%= page.subtitle %></p>
+    </div>
+</section>
+ <% if(page.slug != 'contacts'){ %>
+<section class="content  my-3 py-5">
+    <div class="row">
+        <div class="col-sm-6">
+          
+            <%- include('./partials/slider_widget') %>
+        </div>
+
+        <div class="col-sm-6">
+
+              <h4 class="text-center my-2"> <%= page.ptitle %></h4>
+              <p class="description">
+                <%- page.textcontent%>
+              </p>
+               
+        </div>
+    </div>
+
+
+</section>
+
+<% }else{ %>
+<section class="contact">
+
+    <div class="card-section">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="cards">
+                    <div class="card-top"><i class="las la-map-marker la-2x"></i></div>
+                    <div class="card-title">Office</div>
+                    <div class="cardbody text-center">
+                         <h6>Apapa Office</h6>
+                       <p>No 4 Takoradi Street, GRA Apapa, Lagos Nigeria</p>
+                         <h6>Ikeja Office</h6>
+                        <p>No 4 Olabode Street, Behind Sterling Bank, Ajao Estate, 7&8 Bust stop M/M International Airport Road, Lagos Nigeria</p>
+
+             
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="cards">
+                    <div class="card-top"><i class="las la-phone la-2x"></i></div>
+                    <div class="card-title">Telephone</div>
+                    <div class="cardbody">
+                        <p><a href="tel:+2348140325614">+2348140325614</a></p>
+                        <p><a href="tel:+2348053250822 ">+2348053250822</a></p>
+                        <p> Wechat: A08140325614</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="cards">
+                    <div class="card-top"><i class="las la-envelope la-2x"></i></div>
+                    <div class="card-title">Email</div>
+                    <div class="cardbody">
+                        <p><a href="mailto:Info@allroundcargo.org">Info@allroundcargo.org</a></p>
+                        <p><a href="mailto:allroundcargo1@gmail.com ">allroundcargo1@gmail.com</a></p>
+                        <p class="text-white">.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+ 
+<div class="contact-section parralex">
+    <div class="overlay"></div>
+    <div class="row">
+        <div class="col-sm-6 d-flex">
+            <div class="contact-msg">
+                <h2>Drop us a Note <span>👉</span></h2>
+                <h4>We will get back to you as quick as possible</h4>
+            </div>
+        </div>
+        <div class="col-sm-6 bg-white-form">
+            <%- include('./partials/contactForm') %>
+        </div>
+    </div>
+</div>
+<%} %>
+
+
+
+    
+</body>
+</html>
