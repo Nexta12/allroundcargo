@@ -124,6 +124,7 @@ app.get("/", async (req, res) => {
 });
 
 // APIs
+
 app.use("/secure", require("./server/routes/auth"));
 app.use("/d", require("./server/routes/dashboard"));
 
@@ -135,5 +136,5 @@ app.listen(PORT, () => {
 
 
 app.use((req, res) => {
-  res.render("home");
+  res.render("errors/404");
 });

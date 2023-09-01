@@ -369,7 +369,20 @@ small {
   font-size: 12px;
 }
 
+.container404 {
+  background-color: #003A53;
+  color: #fff;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
+.container404 h5 {
+  font-size: 30px;
+  font-weight: bold;
+}
 
 
 
