@@ -71,6 +71,12 @@ router.get("/register", ensureLoggedin, (req, res) => {
   res.render("register");
 });
 
+
+router.get("/email", (req, res)=>{
+  res.redirect(`https://vm789.tmdcloud.eu:2096/`);
+  return
+})
+
 // Method POST
 router.post("/login", usernameToLowerCase, (req, res, next) => {
   let { username, password } = req.body;
